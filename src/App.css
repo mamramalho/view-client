@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #141414;
+  color: white;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #d30f0f;
+}
+
+.logo {
+  font-size: 2em;
+  font-weight: bold;
+  color: #f00;
+}
+
+.nav a {
+  margin: 0 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+}
+
+.search {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.signup {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 5px 10px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.sidebar {
+  width: 30%;
+}

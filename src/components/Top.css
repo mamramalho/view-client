@@ -1,0 +1,20 @@
+.top-shows, .top-movies {
+    margin-bottom: 20px;
+  }
+  
+  .shows, .movies {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .show, .movie {
+    text-align: center;
+    margin: 10px;
+  }
+  
+  .show img, .movie img {
+    width: 100px;
+    height: 150px;
+    border-radius: 10px;
+  }
+  
