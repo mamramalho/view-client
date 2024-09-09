@@ -57,7 +57,7 @@ function Calendar() {
 
       <div className="calendar-body">
         <div className="calendar-days">
-          {['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'].map((day) => (
+          {['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'].map((day) => (
             <div key={day} className="calendar-day-name">{day}</div>
           ))}
         </div>
