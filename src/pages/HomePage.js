@@ -8,9 +8,13 @@ const HomePage = () => {
   return (
     <div className="homepage">
       <header className="header">
-        <div className="logo">VIEW</div>
+        <a href="/" className="logo">
+          <span>V</span>
+          <span>I</span>
+          <span>E</span>
+          <span>W</span>
+        </a>
         <nav className="nav">
-          <a href="/">Home</a>
           <a href="/movies">Movies/TV Shows</a>
           <a href="/upcoming">Upcoming</a>
           <a href="/contact">Contact us</a>
