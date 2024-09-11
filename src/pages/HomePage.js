@@ -1,7 +1,5 @@
 import React from 'react';
 import Calendar from '../components/Calendar';
-import TopShows from '../components/TopShows';
-import TopMovies from '../components/TopMovies';
 import './HomePage.css';
 
 const HomePage = () => {
@@ -26,10 +24,6 @@ const HomePage = () => {
       </header>
       <div className="content">
         <Calendar />
-        <div className="sidebar">
-          <TopShows />
-          <TopMovies />
-        </div>
       </div>
     </div>
   );

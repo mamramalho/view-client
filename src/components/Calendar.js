@@ -15,16 +15,20 @@ function Calendar() {
     const firstDay = new Date(year, month, 1).getDay();
     const totalDays = new Date(year, month + 1, 0).getDate();
 
+    const today = new Date(); // Get today's date
     const daysArray = [];
 
-    // Create empty slots for days before the 1st of the month
     for (let i = 0; i < firstDay; i++) {
       daysArray.push(null);
     }
 
-    // Fill the days of the current month
     for (let day = 1; day <= totalDays; day++) {
-      daysArray.push(day);
+      const isToday =
+        today.getFullYear() === year &&
+        today.getMonth() === month &&
+        today.getDate() === day;
+
+      daysArray.push({ day, isToday }); // Store day and check if it's today
     }
 
     setDaysInMonth(daysArray);
@@ -49,9 +53,10 @@ function Calendar() {
     <div className="calendar-container">
       <div className="calendar-header">
         <button onClick={handlePrevMonth}>{"<"}</button>
-        <h2>
-          {monthNames[currentDate.getMonth()]} {currentDate.getFullYear()}
-        </h2>
+        <div className="calendar-title">
+          <h1>{monthNames[currentDate.getMonth()]}</h1>
+          <h2>{currentDate.getFullYear()}</h2>
+        </div>
         <button onClick={handleNextMonth}>{">"}</button>
       </div>
 
@@ -63,9 +68,12 @@ function Calendar() {
         </div>
 
         <div className="calendar-dates">
-          {daysInMonth.map((day, index) => (
-            <div key={index} className={`calendar-day ${day ? '' : 'empty'}`}>
-              {day}
+          {daysInMonth.map((dayInfo, index) => (
+            <div
+              key={index}
+              className={`calendar-day ${dayInfo ? (dayInfo.isToday ? 'today' : '') : 'empty'}`}
+            >
+              {dayInfo?.day}
             </div>
           ))}
         </div>

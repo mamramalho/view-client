@@ -1,3 +1,5 @@
+@import url('https://fonts.cdnfonts.com/css/post-no-bills-jaffna');
+
 .calendar-header {
   display: flex;
   justify-content: space-between;
@@ -5,23 +7,42 @@
   margin-bottom: 20px;
 }
 
-.calendar-header h2 {
-  font-size: 2.5em;
-  font-family: 'Post No Bills Jaffna ExtraBold', 'Impact', sans-serif;
+.calendar-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  height: 15vh;
+  width: 50vh;
+  border-radius: 25px;
+}
+
+.calendar-title h1 {
+  font-size: 1.5em;
+  margin-bottom: 0px;
+  margin-top: 30px; 
+}
+
+.calendar-title h2 {
+  margin-top: -20px;
+  font-size: 1em;
+  margin-bottom: 30px; 
 }
 
 .calendar-header button {
-  background-color: #d30f0f;
+  background-color: #A6051A;
   border: none;
-  color: white;
-  font-size: 1.5em;
-  padding: 10px;
+  color: #FFFFFF;
+  font-size: 2em;
+  padding: 20px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 20px;
 }
 
 .calendar-header button:hover {
-  background-color: #ff0000;
+  background-color: #191414;
+  color: #FFFFFF;
 }
 
 .calendar-body {
@@ -31,31 +52,44 @@
 
 .calendar-days {
   display: grid;
-  grid-template-columns: repeat(7, 1fr); /* 7 equal columns */
-  gap: 5px;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 15px;
 }
 
 .calendar-day-name {
   text-align: center;
-  font-weight: bold;
-  color: white;
+  font-weight: bolder;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: #FFFFFF;
 }
 
 .calendar-dates {
   display: grid;
-  grid-template-columns: repeat(7, 1fr); /* 7 equal columns */
-  gap: 5px;
+  grid-template-columns: repeat(7, 1fr); 
+  gap: 15px;
+}
+
+
+.calendar-day.today {
+  background-color: #191414; 
+  color: #ffffff; 
+  font-weight: bold; 
 }
 
 .calendar-day {
-  height: 50px;
+  height: 160px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-  color: #000;
+  flex-direction: column;
+  justify-content: flex-start; 
+  align-items: flex-start; 
+  padding: 10px; 
+  background-color: #FFFFFF;
+  color: #141414;
   border-radius: 5px;
   cursor: pointer;
+  position: relative;
+  font-weight: bold;
 }
 
 .calendar-day.empty {
@@ -63,6 +97,17 @@
   cursor: default;
 }
 
+.calendar-day.current {
+  background-color: #A6051A; 
+  color: #FFFFFF; 
+}
+
 .calendar-day:hover:not(.empty) {
-  background-color: #ffcccc;
+  background-color: #ff0606;
+}
+
+.episode-info {
+  margin-top: 10px; 
+  font-size: 0.9em;
+  color: #666666;
 }
