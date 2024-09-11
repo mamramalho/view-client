@@ -1,0 +1,134 @@
+@import url('https://fonts.cdnfonts.com/css/post-no-bills-jaffna');
+@font-face {font-family: neon;src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);}
+  
+@keyframes neon {
+    0%,
+    100% {
+        text-shadow: 0 0 1vw #FA1C16, 0 0 3vw #FA1C16, 0 0 10vw #FA1C16, 0 0 10vw #FA1C16, 0 0 .4vw #FED128, .5vw .5vw .1vw #806914;
+        color: #FED128;
+    }
+    50% {
+        text-shadow: 0 0 .5vw #800E0B, 0 0 1.5vw #800E0B, 0 0 5vw #800E0B, 0 0 5vw #800E0B, 0 0 .2vw #800E0B, .5vw .5vw .1vw #40340A;
+        color: #806914;
+    }
+}
+  
+@keyframes flux {
+    0%,
+    100% {
+        text-shadow: 0 0 1vw #1041FF, 0 0 3vw #1041FF, 0 0 10vw #1041FF, 0 0 10vw #1041FF, 0 0 .4vw #8BFDFE, .5vw .5vw .1vw #147280;
+        color: #28D7FE;
+    }
+    50% {
+        text-shadow: 0 0 .5vw #082180, 0 0 1.5vw #082180, 0 0 5vw #082180, 0 0 5vw #082180, 0 0 .2vw #082180, .5vw .5vw .1vw #0A3940;
+        color: #146C80;
+    }
+}
+  
+@keyframes slideInLetter {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+        color: #fff;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+        color: #FF0606;
+    }
+}
+
+.movies-container {
+    background-color: #191414;
+    color: #fff;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.movies-title {
+    margin-top: 0px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    margin-bottom: 0;
+    font-weight: bolder;
+    font-size: 4rem !important;
+    font-family: 'Post No Bills Jaffna ExtraBold', 'Impact', sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-shadow:
+        -0.2rem -0.2rem 1rem #fff,
+        0.2rem 0.2rem 1rem #fff,
+        0 0 2rem var(--neon-text-color),
+        0 0 4rem var(--neon-text-color),
+        0 0 6rem var(--neon-text-color),
+        0 0 8rem var(--neon-text-color),
+        0 0 10rem var(--neon-text-color);
+}
+
+.movies-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: none;
+}
+
+.nav-item {
+    background: none !important;
+    border: none;
+    color: #FFFFFF;
+    height: 60px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bolder;
+    margin-left: 15px;
+    display: inline-block;
+    padding: 15px 20px;
+    position: relative;
+    transition: color 0.3s ease; 
+}
+
+.nav-item:after {
+    margin-top: 10px;
+    background: none;
+    content: "";
+    display: block;
+    height: 3px;
+    left: 50%;
+    position: absolute;
+    background: #FF0606;
+    transition: width 0.3s ease, left 0.3s ease;
+    width: 0;
+}
+
+.nav-item:hover:after {
+    width: 100%;
+    left: 0;
+    color: #FF0606;
+    font-size: 1em;
+    text-shadow: 0 0 3vw #FFFFFF;
+}
+
+/* Neon effect for the active nav item */
+.nav-item.active {
+    background: none;
+    border: none;
+    color: #FF0606;
+    font-size: 1em;
+    text-shadow: 0 0 3vw #FFFFFF;
+}
+
+.nav-item.active:after {
+    width: 100%;
+    left: 0;
+}
+
+.movies-content {
+    padding: 20px;
+    background-color: #A6051A;
+    border-radius: 15px;
+}
