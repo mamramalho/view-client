@@ -1,6 +1,8 @@
 import React from 'react';
 import Calendar from '../components/Calendar';
 import './HomePage.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+
 
 const HomePage = () => {
   return (
@@ -18,7 +20,12 @@ const HomePage = () => {
           <a href="/contact">Contact us</a>
         </nav>
         <div className="actions">
-          <input type="text" className="search" placeholder="Search..." />
+          <div class="box">
+            <form name="search">
+                <input type="text" class="input" name="txt"></input>
+            </form>
+            <i className="fa-solid fa-magnifying-glass"></i>
+          </div>
           <button className="signup">Signup</button>
         </div>
       </header>

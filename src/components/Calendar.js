@@ -15,7 +15,7 @@ function Calendar() {
     const firstDay = new Date(year, month, 1).getDay();
     const totalDays = new Date(year, month + 1, 0).getDate();
 
-    const today = new Date(); // Get today's date
+    const today = new Date(); 
     const daysArray = [];
 
     for (let i = 0; i < firstDay; i++) {
@@ -28,7 +28,7 @@ function Calendar() {
         today.getMonth() === month &&
         today.getDate() === day;
 
-      daysArray.push({ day, isToday }); // Store day and check if it's today
+      daysArray.push({ day, isToday }); 
     }
 
     setDaysInMonth(daysArray);
