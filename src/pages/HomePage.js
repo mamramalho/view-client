@@ -2,15 +2,17 @@ import React from 'react';
 import Navbar from '../components/Navbar';
 import Gallery from '../components/Gallery';
 import Calendar from '../components/Calendar';
-import './HomePage.css'; // Include a global style file for the page
+import './HomePage.css'; 
 
 const HomePage = () => {
   return (
     <div className="homepage">
       <Navbar />
-      <Gallery />
+      <div className='gallery-section'>
+        <Gallery />
+      </div>
+      <hr className='break-section'></hr>
       <div className="calendar-section">
-        <h2>Upcoming Shows</h2>
         <Calendar />
       </div>
     </div>
